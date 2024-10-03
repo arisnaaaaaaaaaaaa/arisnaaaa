@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Manipulation</title>
+</head>
+<body>
+
+  <!-- Tempat untuk menampilkan hasil -->
+  <h3>Sorted Angka:</h3>
+  <p id="sortedAngka"></p>
+
+  <h3>Sorted Huruf:</h3>
+  <p id="sortedHuruf"></p>
+
+  <h3>Genap dari angka [1-9]:</h3>
+  <p id="genapAngka"></p>
+
+  <h3>Array Boolean (Genap atau Ganjil):</h3>
+  <p id="booleanArray"></p>
+
+  <script>
+    // Data 1
+    const angka1 = [20, 10, 3, 30, 58, 42, 6, 9];
+    const huruf = ['z', 'a', 'c', 'g', 'p'];
+
+    // Mengurutkan angka dan huruf secara ascending
+    const sortedAngka = angka1.sort((a, b) => a - b);
+    const sortedHuruf = huruf.sort();
+
+    // Menampilkan hasil ke dalam elemen HTML
+    document.getElementById("sortedAngka").textContent = sortedAngka.join(', ');
+    document.getElementById("sortedHuruf").textContent = sortedHuruf.join(', ');
+
+    // Data 2
+    const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    // Mengambil hanya angka genap
+    const genap = angka2.filter(num => num % 2 === 0);
+
+    // Menampilkan hasil angka genap
+    document.getElementById("genapAngka").textContent = genap.join(', ');
+
+    // Data 3
+    const angka3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    // Membuat array boolean berdasarkan angka genap (true) dan ganjil (false)
+    const booleanArray = angka3.map(num => num % 2 === 0);
+
+    // Menampilkan hasil array boolean
+    document.getElementById("booleanArray").textContent = booleanArray.join(', ');
+  </script>
+
+</body>
+</html>
