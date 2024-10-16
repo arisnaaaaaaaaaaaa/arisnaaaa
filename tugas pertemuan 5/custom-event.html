@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol Klik dengan Penghitung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #click-count {
+            font-size: 18px;
+            color: blue;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tombol Rahasia</h1>
+    <button id="clickButton">Klik Ini!!!</button>
+    <p id="click-count">Jumlah klik: 0</p>
+
+    <script>
+        let clickCount = 0;
+        const button = document.getElementById('clickButton');
+        const clickCountParagraph = document.getElementById('click-count');
+
+        button.addEventListener('click', function() {
+            clickCount++;
+            clickCountParagraph.textContent = "Jumlah klik: " + clickCount;
+        });
+    </script>
+</body>
+</html>
