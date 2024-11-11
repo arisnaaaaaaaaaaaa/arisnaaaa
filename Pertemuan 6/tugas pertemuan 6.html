@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom JavaScript</title>
+    <link rel="stylesheet" href="pt6.css">
+</head>
+<body>
+    <p>Nama Buah : <strong id="hasil"></strong></p>
+    <input type="text" placeholder="Masukkan Nama Buah" id="input">
+    <button id="submit">Beli</button>
+    <table>
+        <h4>Data Pembelian:</h4>
+        <tr>
+            <td>Nama Buah</td>
+            <td>:</td>
+            <td>........</td>
+        </tr>
+        <tr>
+            <td>Harga/Kg</td>
+            <td>:</td>
+            <td>........</td>
+        </tr>
+        <tr>
+            <td>Diskon</td>
+            <td>:</td>
+            <td>........</td>
+        </tr>
+    </table><br><br>
+    <table border="1">
+        <tr>
+            <th>Nama Buah</th>
+            <th>Harga/Kg</th>
+            <th>Diskon</th>
+        </tr>
+        <tr>
+            <td>Nanas</td>
+            <td>7.500</td>
+            <td>5%</td>
+        </tr>
+        <tr>
+            <td>Anggur</td>
+            <td>35.000</td>
+            <td>15%</td>
+        </tr>
+        <tr>
+            <td>Melon</td>
+            <td>12.500</td>
+            <td>10%</td>
+        </tr>
+    </table>
+
+    <script>
+        var hasil = document.getElementById('hasil');
+        var submit = document.getElementById('submit');
+
+        submit.onclick = ambilnilai;
+
+        function ambilnilai(){
+            var text = document.getElementById('input').value;
+            hasil.innerHTML = text;
+        }
+    </script>
+</body>
+</html>
